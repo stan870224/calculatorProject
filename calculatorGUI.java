@@ -14,10 +14,10 @@ public class calculatorGUI extends JFrame implements ActionListener {
     public calculatorGUI() {
         super("Calculator");
         Calculator = new calculator(); 
-        display = new JTextArea(3,20);
+        display = new JTextArea(1,10);
         display.setEditable(true); 
         display.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-        
+        display.setFont(new Font("Serif", Font.BOLD, 50)); 
 
         // 初始化?字按?
         numbers = new JButton[10]; 
@@ -77,10 +77,10 @@ public class calculatorGUI extends JFrame implements ActionListener {
         this.add(display, BorderLayout.NORTH); // 將顯示區域添加到窗口的上方
         this.add(buttonPanel, BorderLayout.CENTER);
         // 設置窗口的推薦大小
-        this.setPreferredSize(new Dimension(300, 500)); // 這裡的 300 是寬度，400 是高度
+        this.setPreferredSize(new Dimension(300, 450)); // 這裡的 300 是寬度，400 是高度
 
         // 設置窗口的實際大小
-        this.setSize(300, 500);
+        this.setSize(300, 450);
 
         // ?置窗口的?性
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -115,7 +115,7 @@ public class calculatorGUI extends JFrame implements ActionListener {
         }
 
         Calculator.reset();
-        
+
     }
 }
     public static void main(String[] args) {
